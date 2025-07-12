@@ -1,3 +1,11 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #9091C5;
+  background: radial-gradient(circle, rgba(144, 145, 197, 1) 0%, rgba(195, 195, 235, 1) 100%);
+  padding-top: 64px;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
