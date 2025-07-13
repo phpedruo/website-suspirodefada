@@ -2,8 +2,7 @@
 import { useState } from 'react';
 import { products } from './products';
 import type { ProductType, CartItemType } from './types'; // Importando nossos tipos
- // Importando nossos tipos
-import ProductCard from './components/ProductCard';
+import ProductCarousel from './components/ProductCarousel';
 import Cart from './components/Cart.tsx';
 import Navbar from './components/Navbar';
 import './App.css';
@@ -13,15 +12,15 @@ function App() {
   const [cart, setCart] = useState<CartItemType[]>([]);
 
   // A função recebe um parâmetro do tipo ProductType
-  const addToCart = (productToAdd: ProductType) => {
+  const addToCart = (productToAdd: ProductType, quantity: number) => {
     setCart(currentCart => {
       const existingProduct = currentCart.find(item => item.id === productToAdd.id);
       if (existingProduct) {
         return currentCart.map(item =>
-          item.id === productToAdd.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === productToAdd.id ? { ...item, quantity: item.quantity + quantity } : item
         );
       } else {
-        return [...currentCart, { ...productToAdd, quantity: 1 }];
+        return [...currentCart, { ...productToAdd, quantity }];
       }
     });
   };
@@ -51,21 +50,20 @@ function App() {
     <div className="App">
       <Navbar />
       <header className="app-header">
-        <h1>Suspiro de Fada</h1>
+        <img
+          src="/Banner.svg"
+          alt="Suspiro de Fada Logo"
+          className="logo"
+          style={{ width: 120, height: 'auto', transition: 'transform 0.3s' }}
+          onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.1)')}
+          onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+        />
         <p>Biscoitos artesanais feitos por encomenda.</p>
       </header>
       
       <main>
-        <h2>Nosso Cardápio</h2>
-        <div className="product-list">
-          {products.map(product => (
-            <ProductCard 
-              key={product.id} 
-              product={product} 
-              onAddToCart={addToCart} 
-            />
-          ))}
-        </div>
+        <h2>Cardápio</h2>
+        <ProductCarousel products={products} onAddToCart={addToCart} />
       </main>
 
       <Cart cart={cart} onFinalizeOrder={handleFinalizeOrder} />

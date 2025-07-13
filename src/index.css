@@ -1,13 +1,15 @@
 /* Importa as fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
 
 /* Define as variáveis de cor e fontes para usar em todo o site */
 :root {
   --cor-principal: #9091C5;
   --cor-secundaria: #80D4D3;
   --cor-branca: #FFFFFF;
+  --cor-da-letra: #111111;
 
-  --fonte-logo: 'Modak', system-ui; /* Substitua por 'Benny Black' se instalar localmente */
+  --fonte-titulo: 'Bungee Shade', 'sans-serif', system-ui; /* Substitua por 'Benny Black' se instalar localmente */
   --fonte-texto: 'Delius', cursive;
 }
 
@@ -19,6 +21,6 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: var(--fonte-logo);
-  color: var(--cor-branca);
+  font-family: var(--fonte-titulo);
+  color: var(--cor-da-letra);
 }

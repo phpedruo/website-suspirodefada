@@ -1,0 +1,28 @@
+/* src/components/ProductCarousel.css */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.carousel-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.carousel-btn {
+  background: var(--cor-secundaria, #e0e0e0);
+  border: none;
+  color: #333;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
