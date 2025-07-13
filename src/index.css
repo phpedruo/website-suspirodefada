@@ -1,6 +1,6 @@
 /* Importa as fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
 /* Define as variáveis de cor e fontes para usar em todo o site */
 :root {
@@ -8,19 +8,28 @@
   --cor-secundaria: #80D4D3;
   --cor-branca: #FFFFFF;
   --cor-da-letra: #111111;
+  --cor-do-titulo: #333333;
 
   --fonte-titulo: 'Bungee Shade', 'sans-serif', system-ui; /* Substitua por 'Benny Black' se instalar localmente */
-  --fonte-texto: 'Delius', cursive;
+  --fonte-texto: 'Cookie', cursive;
 }
 
 /* Resets básicos e estilos globais */
 body {
   margin: 0;
   font-family: var(--fonte-texto);
+  font-size: 60px;
   background-color: var(--cor-branca);
 }
 
 h1, h2, h3 {
   font-family: var(--fonte-titulo);
-  color: var(--cor-da-letra);
+  font-size: 70px;
+  color: var(--cor-do-titulo);
+}
+
+p {
+  font-family: var(--fonte-texto);
+  color: var(--cor-branca);
+  line-height: 1.6;
 }

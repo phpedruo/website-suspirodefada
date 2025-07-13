@@ -13,17 +13,17 @@ const Cart: React.FC<CartProps> = ({ cart, onFinalizeOrder }) => {
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
-    <aside className="cart">
-      <h2>Seu Pedido</h2>
+    <aside className="cart-container">
+      <h2 className="cart-title">Seu Pedido</h2>
       {cart.length === 0 ? (
         <p>Seu carrinho está vazio.</p>
       ) : (
         <>
-          <ul>
+          <ul className="cart-items">
             {cart.map(item => (
-              <li key={item.id}>
-                <span>{item.quantity}x {item.name}</span>
-                <span>R$ {(item.price * item.quantity).toFixed(2).replace('.', ',')}</span>
+              <li key={item.id} className="cart-item">
+                <span className="cart-item-name">{item.quantity}x {item.name}</span>
+                <span className="cart-item-qty">R$ {(item.price * item.quantity).toFixed(2).replace('.', ',')}</span>
               </li>
             ))}
           </ul>
@@ -33,7 +33,7 @@ const Cart: React.FC<CartProps> = ({ cart, onFinalizeOrder }) => {
           </div>
         </>
       )}
-      <button onClick={onFinalizeOrder} disabled={cart.length === 0}>
+      <button className="whatsapp-btn" onClick={onFinalizeOrder} disabled={cart.length === 0}>
         Finalizar Pedido no WhatsApp
       </button>
     </aside>

@@ -1,14 +1,45 @@
+/* Botão WhatsApp estilizado */
+
+.whatsapp-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 24px;
+  background: #9091C5;
+  color: #fff;
+  font-size: 3rem;
+  font-family: var(--fonte-texto);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(144, 145, 197, 0.15);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.whatsapp-btn:disabled {
+  background: #bdbdbd;
+  color: #eee;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.whatsapp-btn:hover:not(:disabled) {
+  background: #6c6da6;
+  transform: scale(1.03);
+}
 .cart-container {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 24px;
-    max-width: 400px;
+    max-width: 880px;
     margin: 32px auto;
 }
 
 .cart-title {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 600;
     margin-bottom: 16px;
     color: #333;
@@ -33,21 +64,22 @@
 }
 
 .cart-item-name {
-    font-size: 1rem;
-    color: #444;
+    font-size: 3rem;
+    color: #333;
 }
 
 .cart-item-qty {
-    font-size: 0.95rem;
-    color: #888;
+    font-size: 2.2rem;
+    color: #9091C5;
+    font-weight: 600;
 }
 
 .cart-total {
-    font-size: 1.2rem;
+    font-size: 3rem;
     font-weight: 500;
     text-align: right;
     margin-top: 16px;
-    color: #222;
+    color: #9091C5;
 }
 
 .cart-actions {

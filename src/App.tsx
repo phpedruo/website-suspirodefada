@@ -16,17 +16,26 @@ function App() {
     setCart(currentCart => {
       const existingProduct = currentCart.find(item => item.id === productToAdd.id);
       if (existingProduct) {
+        // Atualiza para a nova quantidade (não soma)
+        if (quantity === 0) {
+          // Remove do carrinho se quantidade for 0
+          return currentCart.filter(item => item.id !== productToAdd.id);
+        }
         return currentCart.map(item =>
-          item.id === productToAdd.id ? { ...item, quantity: item.quantity + quantity } : item
+          item.id === productToAdd.id ? { ...item, quantity } : item
         );
       } else {
-        return [...currentCart, { ...productToAdd, quantity }];
+        // Só adiciona se quantidade > 0
+        if (quantity > 0) {
+          return [...currentCart, { ...productToAdd, quantity }];
+        }
+        return currentCart;
       }
     });
   };
   
   const handleFinalizeOrder = () => {
-    const numeroWhatsapp = '5581999999999'; // <-- TROCAR PELO WHATSAPP DA SUA MÃE
+    const numeroWhatsapp = '5581998456922'; // <-- TROCAR PELO WHATSAPP DA SUA MÃE
     if (cart.length === 0) {
       alert("Seu carrinho está vazio!");
       return;
@@ -54,11 +63,11 @@ function App() {
           src="/Banner.svg"
           alt="Suspiro de Fada Logo"
           className="logo"
-          style={{ width: 120, height: 'auto', transition: 'transform 0.3s' }}
+          style={{ width: 200, height: 'auto', transition: 'transform 0.3s' }}
           onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.1)')}
           onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
         />
-        <p>Biscoitos artesanais feitos por encomenda.</p>
+        <p>Biscoitos artesanais feitos por encomenda, por quem entende do assunto.</p>
       </header>
       
       <main>
@@ -68,9 +77,6 @@ function App() {
 
       <Cart cart={cart} onFinalizeOrder={handleFinalizeOrder} />
 
-      <footer>
-        <p style={{color: 'var(--cor-secundaria)'}}>Suspiro de Fada &copy; 2025</p>
-      </footer>
     </div>
   );
 }
