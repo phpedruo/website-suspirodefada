@@ -24,12 +24,14 @@ const Navbar: React.FC = () => {
     <nav className={`navbar${hidden ? ' navbar--hidden' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
+        <a href="/">
           <img src={Logo} alt="Logo" height={64} />
+        </a>
         </div>
         <ul className="navbar-links">
-          <li><a href="/">Início</a></li>
-          <li><a href="/sobre">Sobre</a></li>
-          <li><a href="/contato">Contato</a></li>
+            {/* <li><a href="/">Início</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/contato">Contato</a></li> */}
         </ul>
       </div>
     </nav>
