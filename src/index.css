@@ -18,6 +18,17 @@
 body {
   margin: 0;
   font-family: var(--fonte-texto);
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
+  h1, h2, h3 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
   font-size: 60px;
   background-color: var(--cor-branca);
 }

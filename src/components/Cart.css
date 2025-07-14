@@ -17,6 +17,29 @@
   transition: background 0.2s, transform 0.2s;
   letter-spacing: 0.5px;
 }
+@media (max-width: 768px) {
+  .cart-container {
+    max-width: 100vw;
+    padding: 8px;
+    margin: 8px auto;
+  }
+  .cart-title {
+    font-size: 1.2rem;
+  }
+  .cart-item-name {
+    font-size: 1rem;
+  }
+  .cart-item-qty {
+    font-size: 1rem;
+  }
+  .cart-total {
+    font-size: 1rem;
+  }
+  .whatsapp-btn {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+}
 
 .whatsapp-btn:disabled {
   background: #bdbdbd;

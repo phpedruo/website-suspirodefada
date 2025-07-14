@@ -22,6 +22,35 @@
   width: 250px;
   transition: box-shadow 0.3s, transform 0.3s;
 }
+@media (max-width: 768px) {
+  .product-card {
+    width: 100vw;
+    min-width: 0;
+    padding: 0.5rem;
+  }
+  .product-card img {
+    height: 120px;
+  }
+  .product-card h3 {
+    font-size: 1.2rem;
+  }
+  .product-card p {
+    font-size: 1rem;
+  }
+  .product-card-quantity {
+    font-size: 1.2rem;
+    min-width: 32px;
+    height: 32px;
+  }
+  .product-card-actions {
+    gap: 0.5rem;
+  }
+  .product-card button {
+    font-size: 1rem;
+    min-width: 32px;
+    padding: 0.5rem 1rem;
+  }
+}
 
 .product-card:hover {
   box-shadow: 0 4px 24px rgba(0,0,0,0.12), 0 1.5px 6px var(--cor-principal, #e0e0e0);
