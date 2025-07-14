@@ -36,11 +36,12 @@ body {
 h1, h2, h3 {
   font-family: var(--fonte-titulo);
   font-size: 70px;
-  color: var(--cor-do-titulo);
+  color: var(--cor-branca);
 }
 
 p {
   font-family: var(--fonte-texto);
+  font-size: 100px;
   color: var(--cor-branca);
   line-height: 1.6;
 }
