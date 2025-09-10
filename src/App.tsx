@@ -35,7 +35,7 @@ function App() {
   };
   
   const handleFinalizeOrder = () => {
-    const numeroWhatsapp = '5581998456922'; // <-- TROCAR PELO WHATSAPP DA SUA MÃE
+    const numeroWhatsapp = '5581999999999';
     if (cart.length === 0) {
       alert("Seu carrinho está vazio!");
       return;
