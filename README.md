@@ -20,8 +20,6 @@ Um website moderno e responsivo para uma loja de biscoitos artesanais feitos por
 - **Linguagem**: TypeScript
 - **Build Tool**: Vite
 - **Styling**: CSS3 com variáveis customizadas
-- **Linting**: ESLint
-- **Fontes**: Google Fonts (Bungee Shade, Cookie)
 
 ## 🚀 Como Executar
 
