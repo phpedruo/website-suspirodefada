@@ -1,69 +1,97 @@
-# React + TypeScript + Vite
+Um website moderno e responsivo para uma loja de biscoitos artesanais feitos por encomenda, construído com **React**, **TypeScript** e **Vite**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 Descrição do Projeto
 
-Currently, two official plugins are available:
+**Suspiro de Fada** é uma aplicação web que permite aos clientes visualizar um cardápio de biscoitos artesanais, adicionar produtos a um carrinho de compras e finalizar pedidos através do WhatsApp de forma prática e intuitiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- **Cardápio Interativo**: Visualize todos os produtos com imagens e preços
+- **Carrinho de Compras**: Gerencie quantidade de produtos com interface intuitiva
+- **Cálculo Automático**: Total do pedido atualizado em tempo real
+- **Integração WhatsApp**: Finalize pedidos direto pelo WhatsApp
+- **Design Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
+- **TypeScript**: Código tipado para maior segurança e manutenibilidade
+- **Animações Suaves**: Transições e efeitos visuais agradáveis
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologias Utilizadas
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend**: React 19
+- **Linguagem**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: CSS3 com variáveis customizadas
+- **Linting**: ESLint
+- **Fontes**: Google Fonts (Bungee Shade, Cookie)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Como Executar
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Pré-requisitos
+- Node.js 18+ instalado
+- npm ou yarn
+
+### Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/website-suspirodefada.git
+
+# Entre no diretório
+cd website-suspirodefada
+
+# Instale as dependências
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Desenvolvimento
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Inicie o servidor de desenvolvimento
+npm run dev
 ```
+
+O site estará disponível em `http://localhost:5173`
+
+### Build para Produção
+
+```bash
+# Compile o projeto
+npm run build
+
+# Visualize o resultado
+npm run preview
+```
+
+## 🎨 Paleta de Cores
+
+- **Principal**: `#9091C5` (roxo)
+- **Secundária**: `#80D4D3` (ciano)
+
+## 📱 Produtos Disponíveis
+
+- Crocantini de Ninho 100g - R$ 10,90
+- Crocantini de Amendoim 100g - R$ 10,90
+- Crocantini de Maracujá 100g - R$ 10,90
+
+## 🔗 Integração WhatsApp
+
+Os pedidos são enviados através do WhatsApp com:
+- Lista de produtos e quantidades
+- Cálculo automático do total
+- Formato organizado e profissional
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Sinta-se livre para:
+1. Fazer um Fork do projeto
+2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abrir um Pull Request
+
+## 📧 Contato
+
+Para dúvidas ou sugestões sobre o projeto, abra uma issue no repositório.
+
+---
+
+**Desenvolvido com ❤️ para Suspiro de Fada**
