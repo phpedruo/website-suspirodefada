@@ -1,4 +1,5 @@
-Um website moderno e responsivo para uma loja de biscoitos artesanais feitos por encomenda, construído com **React**, **TypeScript** e **Vite**.
+Projeto feito com o intuito de explorar ferramentas e possibilidades.
+Website moderno e responsivo para uma loja de biscoitos artesanais feitos por encomenda, construído com **React**, **TypeScript** e **Vite**.
 
 ## 📋 Descrição do Projeto
 
